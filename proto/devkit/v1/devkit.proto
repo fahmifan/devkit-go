@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package devkit.v1;
+
+option go_package = "github.com/fahmifan/devkit/pkg/pb/devkit/v1;devkitv1";
+
+message Empty {}
+
+message CreatedResponse {
+    string id = 1;
+    string message = 2;
+}
+
+message PingResponse {
+    string message = 1;
+}
+
+message FindByIDRequest {
+    string id = 1;
+}
+
+message DeleteByIDRequest {
+    string id = 1;
+}
+
+
+message PaginationMetadata {
+    int32 page = 1;
+    int32 limit = 2;
+    int32 total = 3;
+    int32 total_page = 4;
+}
+
+message PaginationRequest {
+    int32 page = 1;
+    int32 limit = 2;
+}
+
+message TimestampMetadata {
+    string created_at = 1;
+    string updated_at = 2;
+}
+
+message LoginRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message LoginResponse {
+    string token = 1;
+}
+
+message RegisterRequest {
+    string email = 1;
+    string plain_password = 2;
+}
+
+service DevkitService {
+    rpc Ping(Empty) returns (PingResponse) {}
+
+    // Auth
+    // Auth Mutation
+    rpc Login(LoginRequest) returns (LoginResponse) {}
+    rpc Register(RegisterRequest) returns (CreatedResponse) {}
+}

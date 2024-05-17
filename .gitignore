@@ -1,0 +1,8 @@
+.vscode
+submission/*.bin
+file_upload_path/*
+.env
+/node_modules
+/tmp
+/private
+/clientsdk/typescript/node_modules

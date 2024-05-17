@@ -1,0 +1,22 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@bufbuild/protobuf':
+        specifier: ^1.9.0
+        version: 1.9.0
+
+packages:
+
+  '@bufbuild/protobuf@1.9.0':
+    resolution: {integrity: sha512-W7gp8Q/v1NlCZLsv8pQ3Y0uCu/SHgXOVFK+eUluUKWXmsb6VHkpNx0apdOWWcDbB9sJoKeP8uPrjmehJz6xETQ==}
+
+snapshots:
+
+  '@bufbuild/protobuf@1.9.0': {}
